@@ -13,10 +13,12 @@ Stops abuse of your site's Pingback method from XML-RPC by simply removing it.
 
 Stops abuse of your site's Pingback method from XML-RPC by simply removing it. While you can use the rest of XML-RPC methods.
 
-== Removed methods ==
+This is more friendly than disabling totally XML-RPC, that it's needed by some plugins and apps (I.e. Mobile apps or some Jetpack's modules).
 
-* pingback.ping
-* pingback.extensions.getPingbacks
+= Features =
+
+* Removes 'pingback.ping' method from XML-RPC.
+* Removes 'pingback.extensions.getPingbacks' from XML-RPC.
 
 = Requirements =
 
