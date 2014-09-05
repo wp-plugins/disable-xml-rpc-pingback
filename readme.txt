@@ -1,6 +1,6 @@
-=== XML-RPC DDoS Protection ===
+=== Disable XML-RPC Pingback ===
 Contributors: samuelaguilera
-Tags: xml-rpc, xml, rpc, pingback
+Tags: xml-rpc, xml, rpc, pingback, ddos, firewall
 Requires at least: 3.8.1
 Tested up to: 4.0
 Stable tag: 1.0
