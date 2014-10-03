@@ -1,9 +1,9 @@
 <?php
 /*
-Plugin Name: Disable XML-RPC Pingback
-Description: Stops abuse of your site's Pingback method from XML-RPC by simply removing it. While you can use the rest of XML-RPC methods.
+Plugin Name: XML-RPC DDoS Protection
+Description: Stops abuse of your site's XML-RPC by simply removing some methods used by attackers. While you can use the rest of XML-RPC methods.
 Author: Samuel Aguilera
-Version: 1.0
+Version: 1.1
 Author URI: http://www.samuelaguilera.com
 License: GPL2
 */
@@ -22,11 +22,12 @@ You should have received a copy of the GNU General Public License
 along with this program.  If not, see <http://www.gnu.org/licenses/>.
 */
 
-add_filter( 'xmlrpc_methods', 'Remove_Pingback_Method' );
+add_filter( 'xmlrpc_methods', 'SAR_Block_XMLRPC_DDoS' );
 
-function Remove_Pingback_Method( $methods ) {
+function SAR_Block_XMLRPC_DDoS( $methods ) {
    unset( $methods['pingback.ping'] );
    unset( $methods['pingback.extensions.getPingbacks'] );
+   unset( $methods['wp.getUsersBlogs'] ); // New method used by attackers to perform brute force discovery of existing users
    return $methods;
 }
 
