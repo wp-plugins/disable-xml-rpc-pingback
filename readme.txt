@@ -21,7 +21,6 @@ Removes the following methods from XML-RPC interface.
 
 * pingback.ping
 * pingback.extensions.getPingbacks
-* wp.getUsersBlogs
 
 = Requirements =
 
